@@ -1,3 +1,4 @@
+
 function navigateTo(screenId) {
   // Hide all screens
   const screens = document.querySelectorAll('.screen');
@@ -38,4 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target) navigateTo(target);
     });
   });
+
+  // Fix login button to navigate properly
+  const loginBtn = document.querySelector('#login button');
+  if (loginBtn) {
+    loginBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      navigateTo('home');
+    });
+  }
 });
