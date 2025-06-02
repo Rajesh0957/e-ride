@@ -1,45 +1,907 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chirutha Pvt. Ltd.</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+<!-- Programme Entry Screen -->
+<section id="programme-entry" class="screen active">
+  <div class="entry-container">
+    <img src="logo.png" alt="Chirutha Logo" class="logo" />
+    <h1>Welcome to Chirutha E- RIDE</h1>
+    <p>Charged to Cheer,Design to Roar</p>
+    <button       onclick="navigateTo('login')">Get Started</button>
+    <p class="footer-text">By proceeding, you consent to our Terms of Service and Privacy Policy</p>
+  </div>
+ 
+</section>
+
+<!-- Login Screen -->
+<section id="login" class="screen">
+  <div class="login-container">
+    <h2>Login</h2>
+    <p class="subtitle">Get started by logging in or creating an account.</p>
+    <input type="text" placeholder="Email or Mobile" />
+    <input type="password" placeholder="Password" />
+    <button onclick="navigateTo('home')">Login</button>
+      <p class="or-text">Or continue with</p>
+    <div class="otp-buttons">
+      <button>Mobile OTP</button>
+      <button>Email OTP</button>
+    </div>
+    <p class="footer-text">By continuing, you agree to our Terms of Service and Privacy Policy.</p>
+  </div>
+</section>
+
+<!-- Home Screen -->
+<section id="home" class="screen">
+  <div class="home-container">
+      <h2>Library</h2>
+    <input type="text" placeholder="Search trips" class="search-box" />
+    <h2>Welcome to Chirutha</h2>
+    <div class="home-buttons">
+      <button onclick="navigateTo('dashboard')">Dashboard</button>
+      <button onclick="navigateTo('safety')">Emergency Safety</button>
+      <button onclick="navigateTo('control-panel')">Control Panel</button>
+      <button onclick="navigateTo('my-vehicle')">My Vehicle</button>
+      <button onclick="navigateTo('location')">Vehicle Location</button>
+      <button onclick="navigateTo('trips')">Vehicle Trips</button>
+      <button onclick="navigateTo('profile')">Profile</button>
+      <button onclick="navigateTo('account-settings')">Account & Settings</button>
+      <button onclick="navigateTo('contact')">Contact Us</button>
+<div class="bottom-nav">
+  <div class="nav-item" data-target="profile">
+    <img src="profile.png"><br>Profile
+  </div>
+  <div class="nav-item" data-target="location">
+    <img src="location.png"><br>Location
+  </div>
+  <div class="nav-item" data-target="my-vehicle">
+    <img src="vehicle.png"><br>Vehicle
+  </div>
+<div class="nav-item" data-target="account-settings">
+  <img src="images/settings.png"><br>Setting
+</div>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- Dashboard Screen -->
+<section id="dashboard" class="screen">
+  <div class="screen-header">Dashboard</div>
+  <div class="screen-content">
+    <p>Battery: 85%</p>
+    <p>Speed: 60 km/h</p>
+    <p>Range: 220 km</p>
+    <button onclick="navigateTo('home')">Back</button>
+  </div>
+</section>
+
+<!-- Emergency Safety Screen -->
+<section id="safety" class="screen">
+  <div class="screen-header">Emergency Safety</div>
+   <title>Chirutha EV - Safety</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<button   onclick="navigateTo('home')">Back</button>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #111315;
+      color: white;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      font-size: 20px;
+      font-weight: 600;
+      position: relative;
+    }
+    .back-arrow {
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 12px;
+    }
+    .search-box {
+      margin: 0 16px 16px;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: none;
+      background-color: #1E1F22;
+      color: white;
+      font-size: 16px;
+    }
+    .section-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 24px 16px 12px;
+    }
+    .card {
+      background-color: #1E1F22;
+      margin: 8px 16px;
+      padding: 16px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+    }
+    .card-icon {
+      background-color: #2E2F33;
+      padding: 10px;
+      border-radius: 10px;
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .card-title {
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .card-desc {
+      font-size: 13px;
+      color: #ccc;
+      margin-top: 4px;
+    }
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #1E1F22;
+      display: flex;
+      justify-content: space-around;
+      padding: 12px 0;
+      border-top: 1px solid #333;
+    }
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 12px;
+      color: #aaa;
+    }
+    .nav-item.active {
+      color: white;
+    }
+    .nav-item i {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+  </style>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <!-- Programme Entry Screen -->
-  <section id="programme-entry" class="screen active">
-    <div class="entry-container">
-      <img src="logo.png" alt="Chirutha Logo" class="logo" />
-      <h1>Welcome to Chirutha E-RIDE</h1>
-      <p>Charged to Cheer, Designed to Roar</p>
-      <button onclick="navigateTo('login')">Get Started</button>
-    </div>
-  </section>
 
-  <!-- Login Screen -->
-  <section id="login" class="screen">
-    <div class="login-container">
-      <h2>Login to Chirutha</h2>
-      <input type="text" placeholder="Email or Username" required />
-      <input type="password" placeholder="Password" required />
-      <button onclick="navigateTo('home')">Login</button>
-    </div>
-  </section>
+  <div class="header">
+    <div class="back-arrow" onclick="goBack()"></i></div>
+ 
+  </div>
 
-  <!-- Home Screen Placeholder -->
-  <section id="home" class="screen">
-    <div class="home-container">
-      <h1>Welcome Home</h1>
-      <p>This is the start of your electric journey with Chirutha Pvt. Ltd.</p>
-    </div>
-  </section>
+  <div class="search-box">
+    <input type="text" placeholder="Search" />
+  </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Chirutha Pvt. Ltd. All rights reserved.</p>
-    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-  </footer>
+  <div class="section-title">Emergency Assistance</div>
+
+  <div class="card">
+    <div class="card-icon">
+      <i class="fas fa-phone"></i>
+    </div>
+    <div class="card-content">
+      <div class="card-title">SOS Emergency</div>
+      <div class="card-desc">Call for immediate help in critical situations</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">
+      <i class="fas fa-car"></i>
+    </div>
+    <div class="card-content">
+      <div class="card-title">Roadside Assistance</div>
+      <div class="card-desc">Contact roadside assistance for vehicle issues</div>
+    </div>
+  </div>
+
+  <div class="section-title">Safety Guides</div>
+
+  <div class="card">
+    <div class="card-icon">
+      <i class="fas fa-book-open"></i>
+    </div>
+    <div class="card-content">
+      <div class="card-title">Vehicle Emergency Guide</div>
+      <div class="card-desc">Learn how to handle common vehicle emergencies</div>
+    </div>
+ 
+</section>
+
+<!-- Control Panel Screen -->
+<section id="control-panel" class="screen">
+  <div class="screen-header">Control Panel</div>
+  <div class="screen-content">
+     <button onclick="navigateTo('home')">Back</button>
+    <p>AC: On</p>
+    <p>Headlights: Auto</p>
+    <p>Windows: Closed</p>
+  <div class="vehicle-image-container">
+    <img src="vehicle-image.png" alt="Vehicle" class="vehicle-image" />
+  </div>
+
+  <div class="actions-section">
+    <h3 class="section-title">Actions</h3>
+
+    <div class="action-row">
+      <div class="action-icon"><img src="icons/lock.svg" alt="Lock" /></div>
+      <span class="action-label">Lock</span>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+      <span class="toggle-status">OFF</span>
+    </div>
+
+    <div class="action-row">
+      <div class="action-icon"><img src="icons/unlock.svg" alt="Unlock" /></div>
+      <span class="action-label">Unlock</span>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+      <span class="toggle-status">OFF</span>
+    </div>
+
+    <div class="action-row">
+      <div class="action-icon"><img src="icons/lights.svg" alt="Lights" /></div>
+      <span class="action-label">Lights</span>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+      <span class="toggle-status">OFF</span>
+    </div>
+
+    <div class="action-row">
+      <div class="action-icon"><img src="icons/horn.svg" alt="Horn" /></div>
+      <span class="action-label">Horn</span>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+      <span class="toggle-status">OFF</span>
+    </div>
+
+    <div class="action-row">
+      <div class="action-icon"><img src="icons/motor.svg" alt="Motor" /></div>
+      <span class="action-label">Start/Stop Motor</span>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+      <span class="toggle-status">OFF</span>
+    </div>
+  
+</div>  
+  </div>
+</section>
+
+<!-- My Vehicle Screen -->
+<section id="my-vehicle" class="screen">
+  <div class="screen-header">My Vehicle</div>
+  <div class="screen-content">
+    <p>Model: Chirutha X1</p>
+    <p>VIN: 1234ABC56789</p>
+    <p>Status: Connected</p>
+    <button onclick="navigateTo('home')">Back</button>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .container {
+      padding: 20px 16px;
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+
+    .top-bar .back-arrow {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .top-bar h1 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .image-container {
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .image-container img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .section {
+      background-color: #111;
+      padding: 12px 14px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .section-title {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .battery-level {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 10px;
+      background-color: #444;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      width: 75%;
+      height: 100%;
+      background-color: #c7f22f;
+    }
+
+    .location-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .quick-info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .info-box {
+      background-color: #1a1a1a;
+      padding: 10px 12px;
+      border-radius: 10px;
+    }
+
+    .info-box span {
+      display: block;
+      font-size: 14px;
+    }
+
+    .info-label {
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #0a0a0a;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      border-top: 1px solid #222;
+    }
+
+    .nav-item {
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .nav-item.active {
+      color: #c7f22f;
+    }
+
+    .nav-item i {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="top-bar">
+      <div class="back-arrow">&#8592;</div>
+      <h1>My Vehicle</h1>
+      <div></div>
+    </div>
+
+    <div class="image-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/NIU_Electric_Scooter.jpg/800px-NIU_Electric_Scooter.jpg" alt="Vehicle" />
+    </div>
+
+    <div class="section">
+      <div class="section-title">Battery</div>
+      <div class="battery-level">
+        <span>Battery Level</span>
+        <span>75%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Location</div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Simple_map_example.png/480px-Simple_map_example.png" alt="Map" class="location-img" />
+    </div>
+
+    <div class="section">
+      <div class="section-title">Quick Info</div>
+      <div class="quick-info">
+        <div class="info-box">
+          <span class="info-label">Model</span>
+          <span>Scooty X1</span>
+        </div>
+        <div class="info-box">
+          <span class="info-label">Range</span>
+          <span>45 miles</span>
+        </div>
+        <div class="info-box">
+          <span class="info-label">Last Updated</span>
+          <span>2 hours ago</span>
+        </div>
+      </div>
+    </div>
+
 </body>
-</html>
+  </div>
+</section>
+
+<!-- Vehicle Location Screen -->
+<section id="location" class="screen">
+  <div class="screen-header">Vehicle Location</div>
+    <button onclick="navigateTo('home')">Back</button>
+  
+  <div class="screen-content">
+    <p>Your Vehicle Location:,Area</p>
+    <p>Your Location:,Area</p>
+    <p> </p>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #111315;
+      color: white;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .back-arrow {
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 12px;
+    }
+    .search-box {
+      padding: 0 16px;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: none;
+      background-color: #1E1F22;
+      color: white;
+      font-size: 16px;
+    }
+    #map {
+      height: 400px;
+      margin: 16px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .footer-buttons {
+      position: fixed;
+      bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      padding: 0 16px;
+    }
+    .footer-buttons button {
+      padding: 14px 18px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      min-width: 40%;
+    }
+    .locate-btn {
+      background-color: #B2C7D9;
+      color: #111315;
+    }
+    .track-btn {
+      background-color: #2C2C2C;
+      color: white;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+  <div class="header">
+    <div class="back-arrow" onclick="history.back()"><i class="fas fa-arrow-left"></i></div>
+    Locate
+  </div>
+
+  <div class="search-box">
+    <input type="text" placeholder="Search" />
+  </div>
+
+  <div id="map"></div>
+
+  <div class="footer-buttons">
+    <button class="locate-btn" onclick="locateVehicle()">Locate my vehicle</button>
+    <button class="track-btn">Track if stolen</button>
+  </div>
+
+  <script>
+    // Coordinates for Hafeezpet, Hyderabad
+    const hafeezpetLat = 17.4715;
+    const hafeezpetLng = 78.3570;
+
+    // Init map at Hafeezpet
+    let map = L.map('map').setView([hafeezpetLat, hafeezpetLng], 15);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Static Hafeezpet marker
+    const hafeezpetMarker = L.marker([hafeezpetLat, hafeezpetLng])
+      .addTo(map)
+      .bindPopup("Hafeezpet, Hyderabad")
+      .openPopup();
+
+    // Geolocation marker (dynamic)
+    let userMarker;
+
+    function locateVehicle() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+
+            map.setView([lat, lng], 16);
+
+            if (userMarker) {
+              userMarker.setLatLng([lat, lng]);
+            } else {
+              userMarker = L.marker([lat, lng])
+                .addTo(map)
+                .bindPopup("You are here")
+                .openPopup();
+            }
+          },
+          () => {
+            alert("Unable to retrieve your location.");
+          }
+        );
+      } else {
+        alert("Geolocation not supported by this browser.");
+      }
+    }
+  </script>
+  </div>
+</section>
+
+<!-- Vehicle Trips Screen -->
+<section id="trips" class="screen">
+  <div class="screen-header">Vehicle Trips</div>
+  <button onclick="navigateTo('home')">Back</button>
+  <div class="screen-content">
+
+</head>
+<body>
+  <div class="trips-screen">
+    <div class="header">
+    </div>
+
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search trips" />
+    </div>
+
+    <div class="section-label">Last 30 days</div>
+
+    <div class="trip-card">
+      <div class="icon">📍</div>
+      <div class="trip-info">
+        <div class="trip-title">Home to Work</div>
+        <div class="trip-subtitle">12.3 mi · 3.2 kWh</div>
+      </div>
+    </div>
+
+    <div class="trip-card">
+      <div class="icon">📍</div>
+      <div class="trip-info">
+        <div class="trip-title">Work to Gym</div>
+        <div class="trip-subtitle">15.7 mi · 4.1 kWh</div>
+      </div>
+    </div>
+
+    <div class="trip-card">
+      <div class="icon">📍</div>
+      <div class="trip-info">
+        <div class="trip-title">Gym to Home</div>
+        <div class="trip-subtitle">8.5 mi · 2.5 kWh</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>    
+</section>
+
+<!-- Profile Screen -->
+<section id="profile" class="screen">
+  <div class="screen-header">Profile</div>
+  <div class="screen-content">
+    <button onclick="navigateTo('home')">Back</button>
+  </div>
+   <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #111111;
+      color: white;
+    }
+    .search-bar {
+      background-color: #1e1e1e;
+      margin: 16px;
+      border-radius: 12px;
+      padding: 12px;
+      color: #999;
+      font-size: 14px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      margin-top: 8px;
+    }
+
+    .back-arrow {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .title {
+      text-align: center;
+      font-weight: 600;
+      font-size: 18px;
+      flex-grow: 1;
+      margin-right: 24px;
+    }
+
+    .profile {
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .profile img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .profile h2 {
+      margin: 12px 0 4px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .profile p {
+      color: #aaa;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .section-title {
+      font-weight: 600;
+      font-size: 15px;
+      padding: 20px 16px 6px;
+      color: #fff;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 16px;
+      border-bottom: 1px solid #333;
+      cursor: pointer;
+    }
+
+    .menu-item span {
+      font-size: 14px;
+    }
+
+    .menu-item .arrow {
+      font-size: 18px;
+      color: #888;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #1e1e1e;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      border-top: 1px solid #333;
+    }
+
+    .bottom-nav .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    .bottom-nav .nav-item.active {
+      color: white;
+    }
+
+    .bottom-nav .nav-item i {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="title">Account</div>
+  </div>
+
+  <div class="profile">
+    <img src="https://via.placeholder.com/100" alt="Profile Picture" />
+    <h2>K RAJESH</h2>
+    <p>Premium Member</p>
+  </div>
+
+  <div class="section-title">Account</div>
+  <div class="menu-item"><span>Personal Information</span> <span class="arrow">›</span></div>
+  <div class="menu-item"><span>Vehicle Details</span> <span class="arrow">›</span></div>
+  <div class="menu-item"><span>Payment Methods</span> <span class="arrow">›</span></div>
+  <div class="menu-item"><span>Notifications</span> <span class="arrow">›</span></div>
+
+  <div class="section-title">Settings</div>
+  <div class="menu-item"><span>App Preferences</span> <span class="arrow">›</span></div>
+  <div class="menu-item"><span>Help & Support</span> <span class="arrow">›</span></div>
+  <div class="menu-item"><span>About</span> <span class="arrow">›</span></div>
+
+</body>
+</section>
+
+<!-- Account & Settings Screen -->
+<section id="account-settings" class="screen">
+  <div class="screen-header">Account & Settings</div>
+  <div class="screen-content">
+  <button onclick="navigateTo('home')">Back</button>
+    <p>Password: ******</p>
+    <p>Notifications: Enabled</p>
+    <p>Language: English</p>
+<head>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="settings.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="settings-screen">
+  <div class="top-bar">
+    <h1>Settings</h1>
+  </div>
+
+  <div class="section">
+    <h2>Vehicle</h2>
+
+    <div class="settings-item">
+      <div class="label-group">
+        <p class="label">Vehicle name</p>
+        <p class="value">Scooty</p>
+      </div>
+      <button class="arrow">Next</button>
+    </div>
+
+    <div class="settings-item">
+      <div class="label-group">
+        <p class="label">Firmware updates</p>
+        <p class="value">Firmware updates available</p>
+      </div>
+      <button class="arrow">Next</button>
+    </div>
+  </div>
+
+  <div class="section">	
+    <h2>Notifications</h2>
+
+    <div class="settings-item">
+      <p class="label">Firmware updates</p>
+      <label class="switch">
+        <input type="checkbox" checked />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Support</h2>
+
+    <div class="settings-item">
+      <p class="label">Contact support</p>
+      <button class="arrow">Next</button>
+    </div>
+  </div>
+
+  <nav class="bottom-nav">
+    <button onclick="navigateTo('home')"><img src="icons/home.svg" alt="Home"></button>
+    <button onclick="navigateTo('location')"><img src="icons/location.svg" alt="Location"></button>
+    <button onclick="navigateTo('vehicle')"><img src="icons/vehicle.svg" alt="Vehicle"></button>
+    <button onclick="navigateTo('profile')"><img src="icons/profile.svg" alt="Profile"></button>
+  </nav>
+</body>            
+  </div>
+</section>
+
+<!-- Contact Us Screen -->
+<section id="contact" class="screen">
+  <div class="screen-header">Contact Us</div>
+  <div class="screen-content">
+    <p>Email: support@chirutha.com</p>
+    <p>Phone: +91 8000000000</p>
+    <button onclick="navigateTo('home')">Next</button>
+  </div>
+</section>
