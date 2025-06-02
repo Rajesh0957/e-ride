@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chirutha Pvt. Ltd.</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Programme Entry Screen -->
+  <section id="programme-entry" class="screen active">
+    <div class="entry-container">
+      <img src="logo.png" alt="Chirutha Logo" class="logo" />
+      <h1>Welcome to Chirutha E-RIDE</h1>
+      <p>Charged to Cheer, Designed to Roar</p>
+      <button onclick="navigateTo('login')">Get Started</button>
+    </div>
+  </section>
+
+  <!-- Login Screen -->
+  <section id="login" class="screen">
+    <div class="login-container">
+      <h2>Login to Chirutha</h2>
+      <input type="text" placeholder="Email or Username" required />
+      <input type="password" placeholder="Password" required />
+      <button onclick="navigateTo('home')">Login</button>
+    </div>
+  </section>
+
+  <!-- Home Screen Placeholder -->
+  <section id="home" class="screen">
+    <div class="home-container">
+      <h1>Welcome Home</h1>
+      <p>This is the start of your electric journey with Chirutha Pvt. Ltd.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Chirutha Pvt. Ltd. All rights reserved.</p>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,93 @@
+
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f1a3a, #233e7d);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.screen {
+  display: none;
+  padding: 40px 20px;
+  flex: 1;
+}
+
+.screen.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.entry-container,
+.login-container,
+.home-container {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+button {
+  background: linear-gradient(to right, #1e88e5, #42a5f5);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #1976d2, #1e88e5);
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .entry-container,
+  .login-container,
+  .home-container {
+    padding: 20px;
+  }
+
+  input,
+  button {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .logo {
+    max-width: 100px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
