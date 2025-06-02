@@ -17,7 +17,7 @@
     <p class="subtitle">Get started by logging in or creating an account.</p>
     <input type="text" placeholder="Email or Mobile" />
     <input type="password" placeholder="Password" />
-    <button onclick="navigateTo('home')">Login</button>
+    <button onclick="event.preventDefault(); navigateTo('home')">Login</button>
       <p class="or-text">Or continue with</p>
     <div class="otp-buttons">
       <button>Mobile OTP</button>
@@ -865,7 +865,7 @@
     </div>
   </div>
 
-  <div class="section">	
+  <div class="section">
     <h2>Notifications</h2>
 
     <div class="settings-item">
